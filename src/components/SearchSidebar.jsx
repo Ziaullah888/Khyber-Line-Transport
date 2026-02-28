@@ -1,24 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import updates from "../data/Updates";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import updates from '../data/Updates';
 
 const SearchSidebar = () => {
   const tags = [
-    "Air",
-    "Business",
-    "Cargo",
-    "Digital",
-    "Heavy Machinery Rental",
-    "Logistic & Idea",
-    "Service",
-    "Sweet Water Tanker Dubai",
-    "Transport",
-    "Water Tanker Supplier in Dubai",
+    'Air',
+    'Business',
+    'Cargo',
+    'Digital',
+    'Heavy Machinery Rental',
+    'Logistic & Idea',
+    'Service',
+    'Sweet Water Tanker Dubai',
+    'Transport',
+    'Water Tanker Supplier in Dubai',
   ];
 
   return (
-    <div className="space-y-8  space-x-10 w-90 lg:translate-x-3"> 
-
+    <div className="space-y-8  space-x-10 w-90 lg:translate-x-3">
       <div className="bg-gray-100 shadow-md p-6 rounded-2xl w-full">
         <h3 className="text-lg font-semibold mb-4 pb-2">Search</h3>
         <form className="flex flex-col gap-3 w-full">
@@ -47,7 +46,6 @@ const SearchSidebar = () => {
               >
                 {post.title}
               </Link>
-              
             </li>
           ))}
         </ul>
@@ -70,62 +68,82 @@ const SearchSidebar = () => {
         </form>
       </div>
 
+      <div className="bg-gray-100 shadow-md p-6 rounded-2xl w-full">
+        <h3 className="text-lg font-semibold mb-4 pb-2">Categories</h3>
+        <ul className="text-sm font-medium text-gray-800 space-y-4 w-full">
+          <li>
+            <Link
+              to={'/updates?category=Application'}
+              className="hover:text-red-600 cursor-pointer text-gray-500"
+            >
+              Application
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={'/updates?category=Business'}
+              className="hover:text-red-600 cursor-pointer text-gray-500"
+            >
+              Business
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={'/updates?category=Business Transport'}
+              className="hover:text-red-600 cursor-pointer text-gray-500"
+            >
+              Business Transport
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={'/updates?category=Logistics'}
+              className="hover:text-red-600 cursor-pointer text-gray-500"
+            >
+              Logistics
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={'/updates?category=Marketing'}
+              className="hover:text-red-600 cursor-pointer text-gray-500"
+            >
+              Marketing
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={'/updates?category=Rail freight'}
+              className="hover:text-red-600 cursor-pointer text-gray-500"
+            >
+              Rail freight
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={'/updates?category=Uncategorized'}
+              className="hover:text-red-600 cursor-pointer text-gray-500"
+            >
+              Uncategorized
+            </Link>
+          </li>
+        </ul>
+      </div>
 
-     <div className="bg-gray-100 shadow-md p-6 rounded-2xl w-full">
-  <h3 className="text-lg font-semibold mb-4 pb-2">Categories</h3>
-  <ul className="text-sm font-medium text-gray-800 space-y-4 w-full">
-    <li>
-      <Link to={'/updates?category=Application'} className="hover:text-red-600 cursor-pointer text-gray-500">
-        Application
-      </Link>
-    </li>
-    <li>
-      <Link to={'/updates?category=Business'} className="hover:text-red-600 cursor-pointer text-gray-500">
-        Business
-      </Link>
-    </li>
-    <li>
-      <Link to={'/updates?category=Business Transport'} className="hover:text-red-600 cursor-pointer text-gray-500">
-        Business Transport
-      </Link>
-    </li>
-    <li>
-      <Link to={'/updates?category=Logistics'} className="hover:text-red-600 cursor-pointer text-gray-500">
-        Logistics
-      </Link>
-    </li>
-    <li>
-      <Link to={'/updates?category=Marketing'} className="hover:text-red-600 cursor-pointer text-gray-500">
-        Marketing
-      </Link>
-    </li>
-    <li>
-      <Link to={'/updates?category=Rail freight'} className="hover:text-red-600 cursor-pointer text-gray-500">
-        Rail freight
-      </Link>
-    </li>
-    <li>
-      <Link to={'/updates?category=Uncategorized'} className="hover:text-red-600 cursor-pointer text-gray-500">
-        Uncategorized
-      </Link>
-    </li>
-  </ul>
-</div>
-
-  <div className="bg-gray-100 shadow-md p-6 rounded-2xl w-full">
-  <h3 className="text-lg font-semibold mb-4">Tags</h3>
-  <div className="flex flex-wrap gap-2 w-full">
-    {tags.map((tag, idx) => (
-      <Link
-        key={idx}
-        to={`/updates?tag=${encodeURIComponent(tag)}`}
-        className="text-sm bg-white py-1 px-3 rounded-full border border-gray-300 cursor-pointer hover:bg-blue-100 transition"
-      >
-        {tag}
-      </Link>
-    ))}
-  </div>
-</div>
+      <div className="bg-gray-100 shadow-md p-6 rounded-2xl w-full">
+        <h3 className="text-lg font-semibold mb-4">Tags</h3>
+        <div className="flex flex-wrap gap-2 w-full">
+          {tags.map((tag, idx) => (
+            <Link
+              key={idx}
+              to={`/updates?tag=${encodeURIComponent(tag)}`}
+              className="text-sm bg-white py-1 px-3 rounded-full border border-gray-300 cursor-pointer hover:bg-blue-100 transition"
+            >
+              {tag}
+            </Link>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

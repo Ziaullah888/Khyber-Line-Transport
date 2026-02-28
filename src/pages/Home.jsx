@@ -1,14 +1,13 @@
-import React from 'react'
-import Hero from '../components/Hero'
-import Footer from '../components/Footer'
+import React from 'react';
+import Hero from '../components/Hero';
+import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div>
-      
       <Hero />
-      <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

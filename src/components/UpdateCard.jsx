@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const UpdateCard = ({ update }) => {
   return (
     <div className="flex gap-6 mb-10">
-      
       <div className="w-1/3">
         <img
           src={update.image}
@@ -12,7 +11,6 @@ const UpdateCard = ({ update }) => {
         />
       </div>
 
-      
       <div className="w-2/3">
         <p className="text-sm text-gray-500">{update.date}</p>
 
