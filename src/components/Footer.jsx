@@ -3,11 +3,11 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <Footer className="relative z-30  text-gray-300">
-      <div className="max-w-8xl bg-[#212529] mx-auto pt-20 h-130 px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="relative z-30  text-gray-300">
+      <div className="max-w-8xl bg-[#212529] mx-auto pt-20 min-h-[130px] px-6 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="text-medium space-y-4 ml-4">
           <h4 className="text-white text-lg font-semibold mb-4">About Us</h4>
-          <p className="mb-9 mt-9  text-gray-400">
+          <p className="mb-9 mt-9 text-gray-400">
             Let's know about our company in details
           </p>
 
@@ -123,7 +123,7 @@ const Footer = () => {
       <div className="bg-black border-t border-gray-700 py-4 text-center text-sm text-gray-400">
         © 2024 Khyber Line Transport Services. All Rights Reserved.
       </div>
-    </Footer>
+    </footer>
   );
 };
 
