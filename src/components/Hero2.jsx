@@ -15,7 +15,7 @@ const Hero = ({ title, backgroundImage, para, para2 }) => {
           {title}
         </h1>
       </div>
-      <div className="flex justify-center items-center mt-40 text-gray-500">
+      <div className="flex justify-center items-center mt-40 text-gray-500 my-8">
         <p>
           {para}
           <a href="/contact " className="ml-2 text-red-500 hover:underline">

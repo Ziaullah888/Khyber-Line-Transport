@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import Footer from './Footer';
 
 const ContactMap = ({ mapUrl }) => {
   return (
@@ -10,6 +11,7 @@ const ContactMap = ({ mapUrl }) => {
         allowFullScreen
         referrerPolicy="no-referrer-when-downgrade"
       ></iframe>
+      <Footer />
     </section>
   );
 };

@@ -10,7 +10,9 @@ const UpdateDetail = () => {
 
   const update = updates.find((item) => item.slug === slug);
 
-  if (!update) return;
+  if (!update) {
+    return <h2>Update not found</h2>;
+  }
 
   return (  
     <div>
@@ -19,7 +21,7 @@ const UpdateDetail = () => {
         backgroundImage="https://khyberlinetransportservices.com/wp-content/uploads/2023/07/services-4.jpg"
       />
 
-      <div className="flex  lg:flex-row  gap-1 lg:px-20">
+      <div className="flex lg:flex-row gap-1 lg:px-20">
         {/* Main content */}
         <div className="flex flex-col gap-10 w-full lg:w-2/3 relative">
           <img
@@ -52,6 +54,7 @@ const UpdateDetail = () => {
                 </ul>
               </div>
             ))}
+
           <div className=" h-130 w-full  lg:-translate-x-9 mb-8">
             <h1 className="font-bold text-2xl">Write a Comment</h1>
             <p className="text-gray-400 pt-5">
@@ -63,17 +66,17 @@ const UpdateDetail = () => {
               <input
                 type="text"
                 placeholder="Enter Name"
-                className="w-80 p-4 focus:outline-none focus:ring-1 focus:ring-red-250 bg-gray-100 mb-4 mt-5 mr-7"
+                className="w-[380px] p-4 focus:outline-none focus:ring-1 focus:ring-red-250 bg-gray-100 mb-2 mr-8 mt-5 border border-gray-300 rounded-md"
               />
               <input
                 type="text"
                 placeholder="Enter Email"
-                className="w-80 p-4 focus:outline-none focus:ring-1 focus:ring-red-250 bg-gray-100 mb-4 mt-5"
+                className="w-[380px] p-4 focus:outline-none focus:ring-1 focus:ring-red-250 bg-gray-100 mb-2 mt-5 border border-gray-300 rounded-md"
               />
               <input
                 type="text"
                 placeholder="Enter Website"
-                className="w-full p-4 focus:outline-none focus:ring-1 focus:ring-red-250 bg-gray-100 mb-4 mt-5 mr-7"
+                className="w-full p-4 focus:outline-none focus:ring-1 focus:ring-red-250 bg-gray-100 mb-4 mt-2 mr-7 border border-gray-300 rounded-md"
               />
               <br />
               <textarea
